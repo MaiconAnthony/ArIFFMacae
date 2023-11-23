@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle virtual ar lab redes</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #login-container {
+            background-color: #555;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #777;
+            border-radius: 4px;
+        }
+
+        #login-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login Ar</h2>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" id="login-btn">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function() {
+            // Verificar os dados de login (exemplo: usuário=admin, senha=123)
+            var usernameInput = document.getElementById('username').value;
+            var passwordInput = document.getElementById('password').value;
+
+            if (usernameInput === 'Arthur' && passwordInput === '123456') {
+                // Redirecionar para outra página (exemplo: página-autenticada.html)
+                window.location.href = 'sitear.html';
+            } 
+            else if (usernameInput === 'Rodrigo' && passwordInput === 'papaiscotta') {
+                // Redirecionar para outra página (exemplo: página-autenticada.html)
+                window.location.href = 'sitear.html';
+            }else {
+                alert('Usuário ou senha incorretos. Tente novamente.');
+            }
+        });
+    </script>
+</body>
+</html>
