@@ -17,7 +17,7 @@ function toggleAC() {
 }
 
 function increaseTemperature() {
-  if (acStatus && temperature < 24) {
+  if (acStatus && temperature < 25) {
     temperature++;
     updateTemperature();
   }
